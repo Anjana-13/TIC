@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOOK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body{
+         margin:0;
+         background-size:cover;
+         background-image: url("images/DESCONmain.png");
+      }
+      .container{
+        width:100%;
+        height:100vh;
+        font-family: 'Quicksand',sans-serif;
+        font-weight: bold;
+        font-size:20px;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        box-sizing: border-box;
+      }
+      #pointer{
+        width: 200px;
+        cursor: pointer;
+        height: 52px;
+        position: relative;
+        background: red;
+        margin-left:15vh;
+        margin-top:30vh;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        opacity: 0.8;
+        background-color: #4c6fbf;
+        border-color:transparent ;
+        margin-bottom:-2vh;
+        color:aliceblue;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1rem;
+
+      }
+      #pointer:after{
+          position:absolute;
+          height:3.3vh;
+          width: 3.3vh;
+          border-top: 0px solid black;
+          border-right: 0px solid black;
+          border-left: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          background-color:#4c6fbf;
+          content: '';
+          top:30%;
+          right:95%;
+          transform: rotate(45deg);
+          margin-left:2vh;
+      }
+/*#pointer:after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: -20px;
+  bottom: -3px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid  rgb(198, 208, 223);
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  background-color: transparent;
+}*/
+
+#pointer span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#pointer span:after {
+  content: ' \00AB';
+  position: absolute;
+  opacity: 0;
+  top: 2px;
+  left:-158px;
+  transition: 0.5s;
+}
+
+#pointer:hover span {
+  padding-left: 25px;
+}
+
+#pointer:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+#base {
+      background: red;
+      display: inline-block;
+      margin-left: 20px;
+      margin-top: 55px;
+      margin-right: 10px;
+      cursor: pointer;
+      position: relative;
+      width: 112px;
+      height:15vh;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      opacity: 0.8;
+      background-color:#4c6fbf;
+      border-color:transparent ;
+      margin-left:27vh;
+      color:aliceblue;
+      font-family: 'Open Sans';
+      font-weight: 800;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 0.3em 0.3em 0 0 rgb(147, 169, 201);
+    
+    }
+    #base:hover{
+        box-shadow: 0.3em 0.3em 0 0 rgb(28, 68, 128);
+    }
+    #base:before {
+      border-bottom: 35px solid  #4c6fbf;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      content: "";
+      height: 0;
+      left: 5px;
+      position: absolute;
+      top: -35px;
+      width: 0;
+    }
+    #base:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#base span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+}
+#base span:after {
+  content: ' \00AB';
+  transform:rotate(90deg);
+  position: absolute;
+  opacity: 0;
+  top: -11px;
+  left:4px;
+  transition: 0.5s;
+}
+#base:hover span {
+  padding-top: 25px;
+}
+#base:hover span:after {
+  opacity: 1;
+  right:0;
+}
+    #email{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        margin-left:10vh;
+        margin-top:5vh;
+        margin-bottom: 5vh;
+        cursor: pointer;
+        background-color: transparent;
+        border-color: transparent;
+        margin-left:17vh;
+        margin-right:5vh;
+    }
+    #call{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        cursor: pointer;
+        background-color: transparent;
+        border-color: transparent;
+        margin-left:50vh;
+        margin-right:10vh;
+    }
+    #agenda{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-color: transparent;
+        margin-right:25vh;
+        cursor: pointer;
+        padding:0px;
+        margin-bottom:1vh;
+        border-color: transparent;
+        height:100px;
+        width:100px;
+        margin-left:10vh;
+    }
+  .form-popup {
+        grid-row-start: 2;
+        grid-row-end: 5;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        background-color: transparent;
+        bottom: 0;
+        right: 15px;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+        margin-left:-15vh;
+        margin-right:-15vh;
+        margin-bottom:-10vh;
+        display:none;  
+        background-color: black;
+}
+.btncancel {
+  background-color: red;
+  margin-left:37vh;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.8;
+  position:relative;
+}
+#blackbf{
+  position:absolute;
+  background-color: black;
+}
+#agendapic{
+  position:relative;
+    margin-left:7vh;
+    margin-top:10vh;
+}
+#btncancel:hover{
+    background-color: rgb(192, 70, 70);
+}
+#feedback{
+    border-radius: 30px;
+    cursor: pointer;
+    grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin-left:18vh;
+        margin-bottom:5vh;
+        margin-right:18vh;
+        margin-top:7vh;
+        border-color:#4c6fbf;
+        font-family: 'Anton';
+        font-size: 2rem;
+        color: #4c6fbf;
+        padding:1px;
+}
+#feedback:hover{
+    border-color: white;
+    background-color: #4c6fbf;
+    border-color: white;
+    color:white;
+    opacity: 0.6;
+}
+@media (min-width: 1600px) {
+  #base {
+    height:13vh;
+    width:120px;
+    font-size: 1.3rem;
+  }
+  #feedback{
+    margin-bottom:7vh;
+    margin-top:1vh;
+    margin-left:21vh;
+    margin-right:13vh;
+  }
+  #email{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        margin-left:10vh;
+        margin-top:5vh;
+        margin-bottom: 5vh;
+        cursor: pointer;
+        background-color: transparent;
+        border-color: transparent;
+        margin-left:17vh;
+        margin-right:5vh;
+    }
+    #call{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        cursor: pointer;
+        background-color: transparent;
+        border-color: transparent;
+        margin-left:37vh;
+        margin-right:10vh;
+    }
+    #agenda{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-color: transparent;
+        margin-right:25vh;
+        cursor: pointer;
+        padding:0px;
+        margin-top:6vh;
+        border-color: transparent;
+        height:150px;
+        width:150px;
+        margin-left:10vh;
+    }
+    #pointer:after{
+      right:93%;
+      top:12%;
+    }
+    #pointer{
+      font-size: 1.2rem;
+    }
+    }
+    
+    
+    /*@media (min-width: 1300px) and (max-width: 1600px) {
+#button a {
+font-size: 20px;
+} 
+}*/
+      </style>
+  </head>
+  <body>
+      <div class="container">
+    <button type="button" id="pointer" onclick="location.href='lobby.html';" class="btn btn-primary btn-arrow-left"><span>To Presentation Rooms</span></button>
+    <button id="base" onclick="location.href='audi.html';"><span>To Main Auditorium</span></button>
+    <button id="email" style="font-size:48px;color:white"><i class="fa fa-envelope" onclick="window.open('mailto:anjanavenkat1305@gmail.com');"></i></button>
+    <button id="call" style="font-size:48px;color:white" onclick="myFunction()"><i class="fa fa-phone"></i></button>
+    <button id="agenda" onclick="openForm()"><img src="images/agenda-main.PNG" height="100px" width="100px"></button>
+    <div class="form-popup" id="myForm"><img src="images/black.PNG" id="blackbf">
+        <img src="images/Capture.PNG" id="agendapic">
+        <br>
+        <button type="button" class="btncancel" onclick="closeForm()">Close</button>
+    </div>
+    <button id="feedback">FEEDBACK</button>
+</div>
+  </body>
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>

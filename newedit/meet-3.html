@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOOK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      body{
+         margin:0;
+         background-size:cover;
+         background-image: url("images/DESCONmeet-3.png");
+      }
+      .container{
+        width:100%;
+        height:100vh;
+        font-family: 'Quicksand',sans-serif;
+        font-weight: bold;
+        font-size:20px;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        box-sizing: border-box;
+      }
+      #vid{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        border-color: black;
+        margin-top:15vh;
+      }
+      .wrapper{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-right:2vh;
+        margin-left:-25vh;
+        margin-top:3vh;
+      }
+      #agenda-meet3{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-color: transparent;
+        border-color: transparent;
+        cursor: pointer;
+        height:20vh;
+        width:20vh;
+        margin-top:35vh;
+        margin-left:10vh;
+      }
+      #fb-meet-3{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        background-color: transparent;
+        border-color: transparent;
+        cursor: pointer;
+        margin-top:30vh;
+        margin-left:40vh;
+      }
+      @media(min-width: 1600px){
+        #vid{
+          margin-top:13vh;
+        }
+        #fb-meet-3{
+          margin-top:26vh;
+          margin-left:35vh;
+        }
+        #agenda-meet3{
+          margin-top:22vh;
+          margin-left:7vh;
+        }
+        .wrapper{
+          margin-left:-22vh;
+          margin-top:1vh;
+        }
+      }
+      </style>
+      </head>
+      <body>
+      <div class="container">
+        <!--<div class="box2 sb11">I'm speech bubble</div>-->
+        <div class="wrapper">
+            <svg width="50px" onclick="location.href='lobby.html';" height="50px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                    <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                    <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                    <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+                </g>
+            </svg>
+          </div>
+          <div id="vid"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RKCd9l14dD0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <button id="agenda-meet3"><img src="images/agenda-meet-3.PNG" style="height:100px;width: 100px;"></button>
+          <button id="fb-meet-3"><img src="images/fb-meet-3.PNG"style="height:80px;width: 90px;"></button>
+        </body>

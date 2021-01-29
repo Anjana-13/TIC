@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOOK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      body{
+         margin:0;
+         background-size:cover;
+         background-image: url("images/DESCONaudi.png");
+      }
+      .container{
+        width:100%;
+        height:100vh;
+        font-family: 'Quicksand',sans-serif;
+        font-weight: bold;
+        font-size:20px;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        box-sizing: border-box;
+      }
+      #vid{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        border-color: black;
+      }
+      .wrapper{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-right:2vh;
+        margin-left:-25vh;
+      }
+      #feedbk{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        margin-bottom:2vh;
+        background-color: transparent;
+        height:10vh;
+        width: 20vh;
+        margin-left:45vh;
+        margin-top:5vh;
+        border-color: transparent;
+        cursor: pointer;
+      }
+      #agenda-audi{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        background-color: transparent;
+        padding-bottom: -2vh;
+        margin-left:45vh;
+        border-color: transparent;
+        cursor: pointer;
+        margin-top:7vh;
+      }
+      @media (min-width: 1600px) {
+        .wrapper{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-right:2vh;
+        margin-left:-20vh;
+      }
+      #vid{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        border-color: black;
+        margin-left:6vh;
+        margin-top:2vh;
+      }
+      #feedbk{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        margin-bottom:2vh;
+        background-color: transparent;
+        height:15vh;
+        width: 20vh;
+        margin-left:45vh;
+        margin-top:4vh;
+        border-color: transparent;
+        cursor: pointer;
+        margin-right:-1vh;
+      }
+        }
+
+     /* .box2 {
+  width: 300px;
+  margin: 50px auto;
+  border: 4px solid #00bfb6;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #00bfb6;
+  font-family: arial;
+  position: relative;
+}
+.sb11:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #00bfb6;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  left: -23px;*/
+
+    </style>
+  </head>
+  <body>
+      <div class="container">
+        <!--<div class="box2 sb11">I'm speech bubble</div>-->
+        <div class="wrapper">
+            <svg width="50px" onclick="location.href='main.html';" height="50px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                    <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                    <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                    <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+                </g>
+            </svg>
+          </div>
+          <div id="vid"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RKCd9l14dD0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <button id="agenda-audi"><img src="images/agenda-audi.PNG" style="height:100px"></imgsrc></button>
+          <button id="feedbk"><img src="images/fb-audi.png" style="height:70px;width:70px"></button>
+      </div>
+  </body>

@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BOOK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <style>
+      body{
+         margin:0;
+         background-size:cover;
+         background-image: url("images/DESCONlobby.png");
+      }
+      .container{
+        width:100%;
+        height:100vh;
+        font-family: 'Quicksand',sans-serif;
+        font-weight: bold;
+        font-size:20px;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        box-sizing: border-box;
+      }
+      .wrapper{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-left:-15vh;
+        margin-top:-8vh;
+      }
+      #meet-1{
+        width: 120px;
+        height:100px;
+        cursor: pointer;
+        position: relative;
+        margin-left:15vh;
+        margin-top:13vh;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        opacity: 0.8;
+        background-color: #ff5757;
+        border-color:transparent ;
+        margin-bottom:5vh;
+        color:aliceblue;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 10px;
+
+      }
+      #meet-1:after{
+          position:absolute;
+          height:3.8vh;
+          width: 3.8vh;
+          border-top: 0px solid black;
+          border-right: 0px solid black;
+          border-left: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          background-color:#ff5757;
+          content: '';
+          top:30%;
+          right:90%;
+          transform: rotate(45deg);
+          margin-left:2vh;
+      }
+      #meet-1:hover{
+        background-color:#fc3b3b;
+        box-shadow: #f87272;
+      }
+      #meet-1:hover:after{
+        background-color:#fc3b3b;
+        box-shadow: #f87272;
+      }
+      #meet-2{
+        width: 120px;
+        height:100px;
+        cursor: pointer;
+        position: relative;
+        margin-left:15vh;
+        margin-top:13vh;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        opacity: 0.8;
+        background-color: #f2be32;
+        border-color:transparent ;
+        margin-bottom:5vh;
+        color:aliceblue;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 10px;
+      }
+      #meet-2:after{
+          position:absolute;
+          height:3.8vh;
+          width: 3.8vh;
+          border-top: 2px solid transparent;
+          border-right: 2px solid transparent;
+          border-left: 0px solid transparent;
+          border-bottom: 0px solid transparent;
+          background-color:#f2be32;
+          content: '';
+          top:30%;
+          right:-12%;
+          transform: rotate(45deg);
+          margin-left:2vh;
+      }
+      #meet-2:hover{
+        background-color:#f0b71a;
+        box-shadow: #f87272;
+      }
+      #meet-2:hover:after{
+        background-color:#f0b71a;
+        box-shadow: #f87272;
+      }
+      #meet-3{
+        width: 120px;
+        height:100px;
+        cursor: pointer;
+        position: relative;
+        margin-left:30vh;
+        margin-top:25vh;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        opacity: 0.8;
+        background-color: #00c2cb;
+        border-color:transparent ;
+        color:aliceblue;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 10px;
+
+      }
+      #meet-3:after{
+          position:absolute;
+          height:3.8vh;
+          width: 3.8vh;
+          border-top: 2px solid transparent;
+          border-right: 2px solid transparent;
+          border-left: 0px solid transparent;
+          border-bottom: 0px solid transparent;
+          background-color:#00c2cb;
+          content: '';
+          top:30%;
+          right:90%;
+          transform: rotate(45deg);
+          margin-left:2vh;
+      }
+      #meet-3:hover{
+        background-color:#02a2aa;
+        box-shadow: #f87272;
+      }
+      #meet-3:hover:after{
+        background-color:#02a2aa;
+        box-shadow: #f87272;
+      }
+      #meet-4{
+        width: 120px;
+        height:100px;
+        cursor: pointer;
+        position: relative;
+        margin-right:10vh;
+        margin-top:15vh;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        opacity: 0.8;
+        background-color: #7ed957;
+        border-color:transparent ;
+        margin-bottom:5vh;
+        color:aliceblue;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 10px;
+
+      }
+      #meet-4:after{
+          position:absolute;
+          height:3.8vh;
+          width: 3.8vh;
+          border-top: 2px solid transparent;
+          border-right: 2px solid transparent;
+          border-left: 0px solid transparent;
+          border-bottom: 0px solid transparent;
+          background-color:#7ed957;
+          content: '';
+          top:30%;
+          right:-12%;
+          transform: rotate(45deg);
+          margin-left:2vh;
+      }
+      #meet-4:hover{
+        background-color: #61df2b;
+        box-shadow: #f87272;
+      }
+      #meet-4:hover:after{
+        background-color:#61df2b;
+        box-shadow: #f87272;
+      }
+      #meet-5{
+        width: 120px;
+        height:100px;
+        cursor: pointer;
+        position: relative;
+        margin-top:7vh;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        opacity: 0.8;
+        background-color: #ffbd59;
+        border-color:transparent ;
+        margin-bottom:5vh;
+        color:aliceblue;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 10px;
+
+      }
+      #meet-5:after{
+          position:absolute;
+          height:3.8vh;
+          width: 3.8vh;
+          border-top: 0px solid black;
+          border-right: 0px solid black;
+          border-left: 0px solid black;
+          border-bottom: 0px solid black;
+          background-color:#ffbd59;
+          content: '';
+          top:88%;
+          left:30%;
+          transform: rotate(45deg);
+          margin-left:2vh;
+      }
+      #meet-5:hover{
+        background-color:#fcae39;
+        box-shadow: #f87272;
+      }
+      #meet-5:hover:after{
+        background-color:#fcae39;
+        box-shadow: #f87272;
+      }
+      #fb-lobby{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        background-color: transparent;
+        border-color: transparent;
+        margin-left:30vh;
+        cursor: pointer;
+      }
+      #agenda-lobby{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        background-color: transparent;
+        border-color: transparent;
+        margin-left:8vh;
+        cursor: pointer;
+      }
+      @media (min-width: 1300px) {
+        #meet-1{
+        width: 120px;
+        height:120px;
+        cursor: pointer;
+        position: relative;
+        margin-left:15vh;
+        margin-top:13vh;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        opacity: 0.8;
+        background-color: #ff5757;
+        border-color:transparent ;
+        margin-bottom:5vh;
+        color:aliceblue;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 10px;
+
+      }
+      #meet-1:after{
+          position:absolute;
+          height:3.8vh;
+          width: 3.8vh;
+          border-top: 0px solid black;
+          border-right: 0px solid black;
+          border-left: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          background-color:#ff5757;
+          content: '';
+          top:30%;
+          right:82%;
+          transform: rotate(45deg);
+          margin-left:2vh;
+      }
+      #meet-3{
+        width: 120px;
+        height:120px;
+        cursor: pointer;
+        position: relative;
+        margin-left:30vh;
+        margin-top:25vh;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        opacity: 0.8;
+        background-color: #00c2cb;
+        border-color:transparent ;
+        color:aliceblue;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 10px;
+
+      }
+      #meet-3:after{
+          position:absolute;
+          height:3.8vh;
+          width: 3.8vh;
+          border-top: 2px solid transparent;
+          border-right: 2px solid transparent;
+          border-left: 0px solid transparent;
+          border-bottom: 0px solid transparent;
+          background-color:#00c2cb;
+          content: '';
+          top:30%;
+          right:80%;
+          transform: rotate(45deg);
+          margin-left:2vh;
+      }
+      #meet-5{
+        width: 120px;
+        height:100px;
+        cursor: pointer;
+        position: relative;
+        margin-top:-2vh;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        opacity: 0.8;
+        background-color: #ffbd59;
+        border-color:transparent ;
+        margin-bottom:5vh;
+        color:aliceblue;
+        font-family: 'Open Sans';
+        font-weight: 800;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 10px;
+
+      }
+      #meet-5:after{
+          position:absolute;
+          height:3.8vh;
+          width: 3.8vh;
+          border-top: 0px solid black;
+          border-right: 0px solid black;
+          border-left: 0px solid black;
+          border-bottom: 0px solid black;
+          background-color:#ffbd59;
+          content: '';
+          top:75%;
+          left:20%;
+          transform: rotate(45deg);
+          margin-left:2vh;
+      }
+      #meet-2{
+          height:120px;
+      }
+      #meet-4{
+          height:120px;
+      }
+      #meet-5{
+          height:120px;
+      }
+          #meet-5:after{
+          position:absolute;
+          height:3.8vh;
+          width: 3.8vh;
+          border-top: 0px solid black;
+          border-right: 0px solid black;
+          border-left: 0px solid black;
+          border-bottom: 0px solid black;
+          background-color:#ffbd59;
+          content: '';
+          top:83%;
+          left:30%;
+          transform: rotate(45deg);
+          margin-left:2vh;
+      }
+      #meet-5:hover{
+        background-color:#fcae39;
+        box-shadow: #f87272;
+      }
+      #meet-5:hover:after{
+        background-color:#fcae39;
+        box-shadow: #f87272;
+      }
+      #fb-lobby{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        background-color: transparent;
+        border-color: transparent;
+        margin-left:20vh;
+        cursor: pointer;
+        margin-top:-14vh;
+      }
+      #agenda-lobby{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        background-color: transparent;
+        border-color: transparent;
+        margin-left:8vh;
+        cursor: pointer;
+      }
+        }
+        @media (min-width: 1600px) {
+          #fb-lobby{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        background-color: transparent;
+        border-color: transparent;
+        margin-left:16vh;
+        cursor: pointer;
+        margin-top:-20vh;
+      }
+      #meet-5:after{
+        top:79%;
+        }
+      }
+      </style>
+      <body>
+        <div class="container">
+          <div class="wrapper">
+            <svg width="50px" onclick="location.href='main.html';" height="50px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                    <polygon class="arrow" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                    <polygon class="arrow-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                    <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+                </g>
+            </svg>
+          </div>
+            <button id="agenda-lobby"><img src="images/agenda-lobby.PNG"></button>
+            <button type="button" id="meet-1" onclick="location.href='meet-1.html';">Room-1
+                <p>
+                    Smart Buildings</p>
+            </button>
+            <button type="button" id="meet-2" onclick="location.href='meet-2.html';">Room-2
+                <p>
+                    Smart Transportation</p>
+            </button>
+            <button type="button" id="meet-3" onclick="location.href='meet-3.html';">Room-3
+                <p>
+                    Smart Healthcare and Living</p>
+            </button>
+            <button type="button" id="meet-4" onclick="location.href='meet-4.html';">Room-4
+                <p>
+                    Smart Education</p>
+            </button>
+            <button type="button" id="meet-5" onclick="location.href='meet-5.html';">Room-5
+                <p>
+                    Human vs AI</p>
+            </button>
+            <button id="fb-lobby"><img src="images/fb-lobby.PNG" style="height:100px;width:110px"></button>
+        </div>
+          </body>
+          </html>
